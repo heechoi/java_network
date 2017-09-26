@@ -36,7 +36,7 @@ public class ServerEx {
 				System.out.println(clientMsg);
 				
 				String outputMsg = stIn.readLine();
-				out.write(outputMsg);
+				out.write("<서버>"+outputMsg+"\n");
 				out.flush();
 			}
 		} catch (IOException e) {
@@ -45,9 +45,9 @@ public class ServerEx {
 			try {
 				socket.close();
 				listener.close();
-				in.close();
+				/*in.close();
 				out.close();
-				stIn.close();
+				stIn.close();*/
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
